@@ -181,7 +181,7 @@ function getComponentDocs(componentName) {
 
 function getSelectedComponentsDocs(componentNames) {
   const docsObject = {};
-  console.log(
+  console.error(
     `✅ Getting documentation for components: ${componentNames.join(", ")}`
   );
 
@@ -215,7 +215,7 @@ server.tool(
       .describe("The names of the components"),
   },
   (input) => {
-    console.log(
+    console.error(
       `✅ Selected components: ${input.selectedComponents.join(", ")}`
     );
 
@@ -247,7 +247,7 @@ server.tool(
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.log("Use Gluestack Components MCP Server running on stdio");
+  console.error("Use Gluestack Components MCP Server running on stdio");
 }
 
 main().catch((error) => {
