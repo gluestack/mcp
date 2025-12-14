@@ -12,9 +12,9 @@ This project provides a Model Context Protocol (MCP) server for integrating Glue
 ### 1. Clone and Install Dependencies
 
 ```bash
-git clone <repository-url>
-cd <project-directory>
-npm install
+git clone https://github.com/gluestack/mcp.git
+cd mcp
+npm i
 ```
 
 ## Integration Options
