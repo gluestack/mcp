@@ -181,9 +181,6 @@ function getComponentDocs(componentName) {
 
 function getSelectedComponentsDocs(componentNames) {
   const docsObject = {};
-  console.log(
-    `✅ Getting documentation for components: ${componentNames.join(", ")}`
-  );
 
   for (const componentName of componentNames) {
     docsObject[componentName] = getComponentDocs(componentName);
@@ -215,9 +212,6 @@ server.tool(
       .describe("The names of the components"),
   },
   (input) => {
-    console.log(
-      `✅ Selected components: ${input.selectedComponents.join(", ")}`
-    );
 
     return {
       content: [
